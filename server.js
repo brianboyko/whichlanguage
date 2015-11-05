@@ -4,6 +4,9 @@
 // I can help keep to a pseudo MVC (MVVM?) style and create models
 // outside of the served www directory to connect to the MongoDB. 
 // -- BB
+
+var configDB = require('./db/config.js'); 
+
 var express = require('express'),
     app = express();
 
