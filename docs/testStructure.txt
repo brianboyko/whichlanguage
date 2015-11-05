@@ -1,0 +1,89 @@
+// test and reactions:
+
+Possible answers:
+
+C
+C++
+C#
+Java
+Javascript
+Objective-C
+PHP
+Python
+Ruby
+
+Question 1: 
+
+Why do you want to learn programming?
+* I want to be able to learn alongside my kids (Python+3)
+* Just for fun(Python+1, Javascript + 1, Ruby + 1)
+* Looking to improve myself(Python + 1, Java + 1, Javascript + 1)
+* Interested in programming(Python +1, C + 1, Java + 1)
+* To make money (Javascript + 1, C++ + 1, Objective-C +1)
+* To help with scientific research (Python + 2, Java + 1)
+
+2
+What are you most likely to want to program?
+* Front-End Web (Javascript + 3)
+* Back-End Web (PHP + 2, Ruby + 1)
+* Full-Stack Web (Front-End + Back-End) (PHP +1, Javascript + 1)
+* Gaming (or 3D) (C++ + 3)
+* Mobile Apps (Java + 2, Objective-C + 1)
+* Windows Desktop Apps (C# + 3)
+* Macintosh Desktop Apps (Objective-C + 3)
+
+3
+What's your favorite toy?
+* Lego (Python + 2, Javascript + 1)
+* Play-Doh (Ruby + 2, Javascript + 1)
+* Hot Wheels Cars (C++ + 2, C + 1)
+* Transformers (Javascript + 1, Python + 1, C + 1)
+* Erector Set (C++ +1, C+1, Java + 1)
+* An old and ugly teddybear but I've had it since I was a little kid and love it. (C+ 1, PHP + 2)
+
+4
+Which of these vehicles do you like most:
+* An automatic transmission sedan (Toyota Corolla)
+  (Python + 1, Ruby + 1, Javascript + 1)
+* A manual transmission sportscar
+  (C++ + 1, C + 1, C# + 1)
+* A motorcycle (C# + 1, Objective C + 1, C + 1)
+* An older K-Car
+(C + 1, PHP + 1, Java + 1)
+
+5
+How do you learn best?
+* I like to have a good understanding of the fundimentals before I try creating things. 
+( C++ +1, Java + 1, C + 1, Objective C + 1, C# + 1)
+* I like to do things right away and learn the fundimentals after I see what they can do.
+( Javascript + 1, Php + 1, Python + 1, Ruby + 1)
+
+6
+What's your favorite operating system? 
+
+* Windows (C# + 3)
+* Mac (Objective-C + 3)
+* Linux (C + 2, Java + 1)
+* I want my code to run everywhere 
+(Java + 2, Javascript + 1)
+
+7
+Do you have a smartphone?
+
+* I have an iPhone. (Objective C + 3)
+* I have an Android Phone. (Java + 3)
+* I have a Windows Phone. (C# + 3)
+* I don't have a smartphone. (No respsonse)
+
+8
+Finally, Which of these Middle Earth characters do you identify with most?
+
+* Gandalf: Wants peace and works with everyone. (Java + 2, Javascript + 1)
+* Treebeard: Help little hobbits. (Python + 2, Javascript + 1)
+* The One Ring/Sauron: Your power is known to all. (C + 2, C++ + 1)
+* Saruman: Wants power (C++ + 2, C + 1)
+* Samwise Gamgee: Frequently underestimated & seeks the simple life of the shire. (Javascript + 2, Ruby + 1)
+* Galadriel: Beautiful but likes to say in isolation in her forest. (C# + 2, Objective-C + 1)
+* Boromir: Emotional, and a good guy, but sometimes it feels like he wants to run things. (Ruby + 2, Python + 1)
+* Thorin Oakenshield: Inconsistant and unpredictable, but powerful. (PHP + 2, Javascript) 
+* Smaug: Lonely, loves gold, sense of superiority (which is perhaps justified) (Objective C + 2, C# + 1)
