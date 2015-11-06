@@ -3,14 +3,14 @@
     <ion-list>
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="question in questions" type="item-text-wrap" href="#">
         <div class="item item-text-wrap item-divider"> 
-          {{ question.prompt }}
+          {{ question.prompt }}{{question.name}}
         </div>
           <ion-radio class="item-text-wrap" ng-repeat="answer in question.answers"
                    ng-value="answer.value"
-                   ng-model="question.name"
-                   ng-change="selectChange(answer)">
+                   ng-model="derp"
+                   ng-change="selectChange(answer, question)">
                    <img ng-if="answer.img" ng-src="/img/{{ answer.img }}" />
-          {{ answer.text }}<BR>{{answer.value}}
+          {{ answer.text }}<BR>{{answer.value}}<BR>{{question.name}}
         </ion-radio>
       </ion-item>
     </ion-list>
