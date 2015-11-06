@@ -21,6 +21,23 @@ angular.module('starter.controllers', [])
   $scope.foo = "bar"
 
   $scope.questions = Quiz.all();
+
+  // var responses = {
+  //   'q1': $scope.q1.value,
+  //   'q2': $scope.q2.value,
+  //   'q3': $scope.q3.value,
+  //   'q4': $scope.q4.value,
+  //   'q5': $scope.q5.value,
+  //   'q6': $scope.q6.value,
+  //   'q7': $scope.q7.value,
+  //   'q8': $scope.q8.value
+  // }
+
+//debug code for dev
+  $scope.selectChange = function(answer) {
+    console.log("Question", answer.text, "value:", answer.value);
+    };
+
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {

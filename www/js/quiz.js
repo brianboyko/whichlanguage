@@ -6,6 +6,7 @@ angular.module('starter.quiz', [])
     // questions[0] 
     {
       'prompt': 'Why do you want to learn programming?',
+      'name': 'q1',
       'answers': [
         //questions[0].answers[0] 
         {
@@ -33,6 +34,7 @@ angular.module('starter.quiz', [])
     {
     // questions[1] 
       'prompt': 'What are you most likely to want to program?',
+      'name': 'q2',
       'answers': [
         {
         //questions[1].answers[0]
@@ -68,6 +70,7 @@ angular.module('starter.quiz', [])
     // questions[2] 
     {
       'prompt': 'What was your favorite toy as a child?',
+      'name': 'q3',
       'answers': [
         {
           //questions[2].answers[0]
@@ -105,6 +108,7 @@ angular.module('starter.quiz', [])
     {
       // questions[3] 
       'prompt': 'What type of car are you most likely to buy next?',
+      'name': 'q4',
       'answers': [
         {
           //questions[3].answers[0]
@@ -131,7 +135,8 @@ angular.module('starter.quiz', [])
     },
     {
       // questions[4] 
-      'prompt': 'How do you learn best',
+      'prompt': 'How do you learn best?',
+      'name': 'q5',
       'answers': [
         {
           //questions[4].answers[0]
@@ -146,7 +151,8 @@ angular.module('starter.quiz', [])
     },
     {
       // questions[5] 
-      'prompt': 'Where do you want your program to run',
+      'prompt': 'Where do you want your program to run?',
+      'name': 'q6',
       'answers': [
         {
           //questions[5].answers[0]
@@ -174,6 +180,7 @@ angular.module('starter.quiz', [])
     {
       // questions[6] 
       'prompt': 'Do you have a smartphone?',
+      'name': 'q7',
       'answers': [
         {
           'text': 'I have an iPhone',
@@ -197,6 +204,7 @@ angular.module('starter.quiz', [])
     {
       // questions[7] 
       'prompt': 'Finally, Which of these Middle Earth characters do you identify with most?',
+      'name': 'q8',
       'answers': [
          {
           'text': 'Gandalf: Wants peace and works with everyone.',
