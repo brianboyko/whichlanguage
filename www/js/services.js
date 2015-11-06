@@ -1,30 +1,5 @@
 angular.module('starter.services', [])
 
-// var questions = require('./quiz')
-// var score  = {
-//   'c'           : 0,
-//   'cPlusPlus'   : 0,
-//   'cSharp'      : 0,
-//   'java'        : 0,
-//   'javascript'  : 0,
-//   'objectiveC'  : 0,
-//   'php'         : 0,
-//   'python'      : 0,
-//   'ruby'        : 0
-// }
-
-.factory('Quiz', function(){
-  var questions = require('./quiz')
-    return {
-      all: function() {
-        return questions;
-      },
-      get: function(questionIndex) {
-        return chats[questionIndex];
-      }
-    }
-})
-
 .factory('Chats', function() {
 
   // Some fake testing data

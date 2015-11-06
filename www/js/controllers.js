@@ -18,6 +18,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('QuizCtrl', function($scope, Quiz) {
+  $scope.foo = "bar"
 
   $scope.questions = Quiz.all();
 })

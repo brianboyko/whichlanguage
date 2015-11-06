@@ -1,4 +1,8 @@
-module.exports = [
+angular.module('starter.quiz', [])
+
+.factory('Quiz', function(){
+
+  var questions = [
     // questions[0] 
     {
       'prompt': 'Why do you want to learn programming?',
@@ -293,14 +297,6 @@ module.exports = [
       'prompt': 'Do you have a smartphone?',
       'answers': [
         {
-          //questions[6].answers[0]
-          'text': 'no',
-          'addScore': function(score){
-            // do nothing.
-            return score;
-          }
-        },
-        {
           'text': 'I have an iPhone',
           'addScore': function(score){
             score.objectiveC += 3;
@@ -320,23 +316,21 @@ module.exports = [
             score.cSharp += 3;
             return score;
           }
-        }
+        },
+        {
+          //questions[6].answers[0]
+          'text': 'I don\'t have a smartphone',
+          'addScore': function(score){
+            // do nothing.
+            return score;
+          }
+        },
       ]
     },
     {
       // questions[7] 
       'prompt': 'Finally, Which of these Middle Earth characters do you identify with most?',
       'answers': [
-        {
-          //questions[7].answers[0]
-          'text': 'Gandalf: Wants peace and works with everyone.',
-          'img': 'gandalf.jpg',
-          'addScore': function(score){
-            score.java += 2;
-            score.javascript += 1;
-            return score;
-          }
-        },
          {
           'text': 'Gandalf: Wants peace and works with everyone.',
           'img': 'lotr-gandalf.jpg',
@@ -421,3 +415,13 @@ module.exports = [
       ]
     }
   ]
+
+    return {
+      all: function() {
+        return questions;
+      },
+      get: function(questionIndex) {
+        return questions[questionIndex];
+      }
+    }
+})
