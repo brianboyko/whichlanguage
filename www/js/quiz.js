@@ -10,45 +10,23 @@ angular.module('starter.quiz', [])
         //questions[0].answers[0] 
         {
           'text': 'I want to be able to learn alongside my kids',
-          'addScore': function(score){
-            score.python += 3;
-            return score;
-          }
+          'value': {'python':3}
         },
         {
           'text': 'Just for fun',
-          'addScore': function(score){
-            score.python += 1;
-            score.javascript += 1;
-            score.ruby += 1;
-            return score;
-          }
+          'value': {'python':1, 'javascript': 1, 'ruby': 1}
         },
         {
           'text': 'Looking to improve myself',
-          'addScore': function(score){
-            score.python += 1;
-            score.javascript += 1;
-            score.java += 1;
-            return score;
-          }
+          'value': {'python':1, 'javascript': 1, 'java': 1}
         },
         {
           'text': 'Interested in programming concepts',
-          'addScore': function(score){
-            score.python += 1;
-            score.c += 1;
-            score.java += 1;
-            return score;
-          }
+          'value': {'python':1, 'c': 1, 'java': 1}
         },
         {
           'text': 'To help with scientific research',
-          'addScore': function(score){
-            score.python += 2;
-            score.java += 1;
-            return score;
-          }
+          'value': {'python':2, 'java': 1}
         }
       ]
     },
@@ -59,118 +37,68 @@ angular.module('starter.quiz', [])
         {
         //questions[1].answers[0]
           'text': 'Front-End Web',
-          'addScore': function(score){
-            score.javascript += 3;
-            return score;
-          }
+          'value': {'javascript': 3}
         },
         {
           'text': 'Back-End Web',
-          'addScore': function(score){
-            score.php += 2;
-            score.ruby += 1;
-            return score;
-          }
+          'value': {'ruby':2, 'php': 1}
         },
         {
           'text': 'Full-Stack Web (Both front and back end)',
-          'addScore': function(score){
-            score.php += 1;
-            score.javascript += 2;
-            return score;
-          }
+          'value': {'php':1, 'javascript': 2}
         },
         {
           'text': 'Gaming (or 3D)',
-          'addScore': function(score){
-            score.cPlusPlus += 3;
-            return score;
-          }
+          'value': {'cPlusPlus': 3}
         },
         {
           'text': 'Mobile Apps',
-          'addScore': function(score){
-            score.objectiveC += 1;
-            score.java += 2;
-            return score;
-          }
+          'value': {'objectiveC':1, 'java': 2}
         },
         {
           'text': 'Windows Desktop Apps',
-          'addScore': function(score){
-            score.cPlusPlus += 3;
-            return score;
-          }
+          'value': {'cSharp': 3}
         },
         {
           'text': 'Macintosh Desktop Apps',
-          'addScore': function(score){
-            score.objectiveC += 3;
-            return score;
-          }
+          'value': {'objectiveC': 3}
         },
       ]
     },
     // questions[2] 
     {
-      'prompt': 'What\'s your favorite toy?',
+      'prompt': 'What was your favorite toy as a child?',
       'answers': [
         {
           //questions[2].answers[0]
           'text': 'Lego',
           'img': 'lego.jpg',
-          'addScore': function(score){
-            score.python += 2;
-            score.javascript +=1;
-            return score;
-          }
+          'value': {'python':2, 'javascript': 1}
         },
         {
           'text': 'Play-Doh',
           'img': 'playdoh.jpg',
-          'addScore': function(score){
-            score.javascript += 1;
-            score.ruby += 2;
-            return score;
-          }
+          'value': {'ruby':2, 'javascript': 1}
         },
         {
           'text': 'Hot Wheels Cars',
           'img': 'hotwheels.jpg',
-          'addScore': function(score){
-            score.cPlusPlus += 1;
-            score.c += 1;
-            return score;
-          }
+          'value': {'c':2, 'cPlusPlus': 1}
         },
         {
           'text': 'Transformers',
           'img': 'transformers.jpg',
-          'addScore': function(score){
-            score.python += 1;
-            score.c += 1;
-            score.javascript += 1;
-            return score;
-          }
+          'value': {'python':1, 'c': 1, 'javascript': 1}
         },
         {
           'text': 'Erector Set / Meccano',
           'img': 'erector.jpg',
-          'addScore': function(score){
-            score.java += 1;
-            score.c += 1;
-            score.cPlusPlus += 1;
-            return score;
-          }
+          'value': {'java':1, 'c': 1, 'cPlusPlus': 1}
         },
         {
           'text': 'An old and ugly teddybear but I\'ve had it since I was a little kid and love it.',
           'img': 'teddybear.jpg',
-          'addScore': function(score){
-            score.c += 1;
-            score.php += 1;
-            return score;
-          }
+          'value': {'c': 1, 'php': 2}
         },
       ]
     },
@@ -182,40 +110,22 @@ angular.module('starter.quiz', [])
           //questions[3].answers[0]
           'text': 'Toyota Corolla sedan (with automatic transmission)',
           'img': 'toyota.jpg',
-          'addScore': function(score){
-            score.python += 1;
-            score.javascript += 1;
-            score.ruby += 1;
-            return score;
-          }
+          'value': {'javascript':1, 'python': 1, 'ruby': 1}
         },
         {
           'text': 'Chevrolet Camero (with six speed manual transmission)',
           'img': 'chevy.jpg',
-          'addScore': function(score){
-            score.cPlusPlus += 1;
-            score.c += 1;
-            score.cSharp += 1;
-            return score;
-          }
+          'value': {'c':1, 'cPlusPlus': 1, 'cSharp': 1}
         },
         {
           'text': 'Ford F150 Truck',
           'img': 'ford.jpg',
-          'addScore': function(score){
-            score.cPlusPlus += 1;
-            score.java += 2;
-            return score;
-          }
+          'value': {'java':2, 'cPlusPlus': 1}
         },
         {
           'text': 'A reliable 1989 Dodge Aries',
           'img': 'kcar.jpg',
-          'addScore': function(score){
-            score.php += 2;
-            score.c += 1;
-            return score;
-          }
+          'value': {'php':2, 'c': 1}
         }
       ]
     },
@@ -226,24 +136,11 @@ angular.module('starter.quiz', [])
         {
           //questions[4].answers[0]
           'text': 'I like to have a good understanding of the fundimentals before I try creating things.',
-          'addScore': function(score){
-            score.cPlusPlus += 1;
-            score.c += 1;
-            score.cSharp += 1;
-            score.objectiveC += 1;
-            score.java += 1;
-            return score;
-          }
+          'value': {'c':1, 'cPlusPlus': 1, 'cSharp': 1, 'objectiveC': 1, 'java': 1}
         },
         {
           'text': 'I like to do things right away and learn the fundimentals after I see what they can do.',
-          'addScore': function(score){
-            score.python += 1;
-            score.javascript += 1;
-            score.ruby += 1;
-            score.php +=1;
-            return score;
-          }
+          'value': {'python':1, 'javascript': 1, 'php': 1, 'ruby': 1}
         }
       ]
     },
@@ -254,41 +151,23 @@ angular.module('starter.quiz', [])
         {
           //questions[5].answers[0]
           'text': 'On a Windows desktop or server',
-          'addScore': function(score){
-            score.cSharp += 3;
-            return score;
-          }
+          'value': {'cSharp':3}
         },
         {
           'text': 'On a Macintosh',
-          'addScore': function(score){
-            score.objectiveC += 3;
-            return score;
-          }
+          'value': {'objectiveC':3}
         },
         {
           'text': 'on a smartphone/tablet',
-          'addScore': function(score){
-            score.objectiveC += 2;
-            score.java += 2;
-            return score;
-          }
+          'value': {'objectiveC':2, 'java': 1}
         },
         {
           'text': 'Somewhere in "the cloud"',
-          'addScore': function(score){
-            score.ruby += 2;
-            score.javascript += 2;
-            return score;
-          }
+          'value': {'ruby':2, 'javascript': 2}
         },
         {
           'text': 'I want my code to run everywhere',
-          'addScore': function(score){
-            score.java += 2;
-            score.javascript += 1;
-            return score;
-          }
+          'value': {'java':2, 'javascript': 1}
         }
       ]
     },
@@ -298,32 +177,20 @@ angular.module('starter.quiz', [])
       'answers': [
         {
           'text': 'I have an iPhone',
-          'addScore': function(score){
-            score.objectiveC += 3;
-            return score;
-          }
+          'value': {'objectiveC':3}
         },
         {
           'text': 'I have an Android phone',
-          'addScore': function(score){
-            score.java += 3;
-            return score;
-          }
+          'value': {'java':3}
         },
         {
           'text': 'I have a Windows phone. (No really! I do!)',
-          'addScore': function(score){
-            score.cSharp += 3;
-            return score;
-          }
+          'value': {'cSharp':3}
         },
         {
           //questions[6].answers[0]
           'text': 'I don\'t have a smartphone',
-          'addScore': function(score){
-            // do nothing.
-            return score;
-          }
+          'value': {} // no value
         },
       ]
     },
@@ -334,86 +201,50 @@ angular.module('starter.quiz', [])
          {
           'text': 'Gandalf: Wants peace and works with everyone.',
           'img': 'lotr-gandalf.jpg',
-          'addScore': function(score){
-            score.java += 2;
-            score.javascript += 1;
-            return score;
-          }
+          'value': {'java':2, 'javascript': 1}
         },
          {
           'text': 'Treebeard: Help little hobbits',
           'img': 'lotr-treebeard.jpg',
-          'addScore': function(score){
-            score.python += 2;
-            score.javascript += 1;
-            return score;
-          }
+          'value': {'python':2, 'javascript': 1}
         },
          {
           'text': 'The One Ring/Sauron: Your power is known to all.',
           'img': 'lotr-onering.jpg',
-          'addScore': function(score){
-            score.c += 2;
-            score.cPlusPlus += 1;
-            return score;
-          }
+          'value': {'c':2, 'cPlusPlus': 1}
         },
          {
           'text': 'Saruman: Everyone thinks he\'s the good guy, but he\'s really all about power',
           'img': 'lotr-saruman.jpg',
-          'addScore': function(score){
-            score.cPlusPlus += 2;
-            score.c += 1;
-            return score;
-          }
+          'value': {'cPlusPlus':2, 'c': 1}
         },
          {
           'text': 'Samwise Gamgee: Frequently underestimated & seeks the simple life of the shire.',
           'img': 'lotr-samwise.jpg',
-          'addScore': function(score){
-            score.javascript += 2;
-            score.ruby += 1;
-            return score;
-          }
+          'value': {'javascript':2, 'ruby': 1}
         },
          {
           'text': 'Galadriel: Beautiful but likes to say in isolation in her forest.',
           'img': 'lotr-galadriel.jpg',
-          'addScore': function(score){
-            score.cSharp += 2;
-            score.objectiveC += 1;
-            return score;
-          }
+          'value': {'cSharp':2, 'objectiveC': 1}
         },
          {
           'text': 'Boromir: Emotional, and a good guy, but sometimes it feels like he wants to run things. ',
           'img': 'lotr-boromir.jpg',
-          'addScore': function(score){
-            score.ruby += 2;
-            score.python += 1;
-            return score;
-          }
+          'value': {'ruby':2, 'python': 1}
         },
          {
           'text': 'Thorin Oakenshield: Inconsistant and unpredictable, but powerful.',
           'img': 'lotr-thorin.jpg',
-          'addScore': function(score){
-            score.php += 2;
-            score.javascript += 1;
-            return score;
-          }
+          'value': {'php':2, 'javascript': 1}
         },
          {
           'text': 'Smaug: Lonely, loves gold, sense of superiority (which is perhaps justified)',
           'img': 'lotr-smaug.jpg',
-          'addScore': function(score){
-            score.objectiveC += 2;
-            score.cSharp += 1;
-            return score;
-          }
+          'value': {'objectiveC':2, 'cSharp': 1}
         },
       ]
-    }
+    }    
   ]
 
     return {

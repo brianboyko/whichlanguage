@@ -6,7 +6,8 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+// 'starter.quiz' is found in quiz.js
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'starter.quiz'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -94,5 +95,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $urlRouterProvider.otherwise('/tab/dash');
 
 });
+
+
+// var score  = {
+//   'c'           : 0,
+//   'cPlusPlus'   : 0,
+//   'cSharp'      : 0,
+//   'java'        : 0,
+//   'javascript'  : 0,
+//   'objectiveC'  : 0,
+//   'php'         : 0,
+//   'python'      : 0,
+//   'ruby'        : 0
+// }
 
 },{}]},{},[1]);
