@@ -89,7 +89,7 @@ angular.module('starter.controllers', [])
       headers: {
         'Content-Type': 'application/json'
       },
-      data: { test: "test"}
+      data: user
     }
     $http(req).then(function() {
       console.log("Success")
