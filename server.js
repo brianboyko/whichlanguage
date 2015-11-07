@@ -10,15 +10,18 @@
 //--------------
 // Libraries
 var mongoose = require('mongoose'); // some people like the native driver, I think MongoDB (ORM) is easier on development than the native driver (ODM). 
+var bodyParser = require('body-parser')
 var express  = require('express');
 // Local
 var configDB = require('./db/config.js'); 
+var nodemailer = require('nodemailer');
 
 // -------------
 // CONNECTIONS & CONFIGURATION
 // -------------
 mongoose.connect(configDB.url);
 var app = express();
+app.use(bodyParser.json());
 require('./config/routes.js')(app);
 
 // CORS (Cross-Origin Resource Sharing) headers to support Cross-site HTTP requests
@@ -34,12 +37,7 @@ app.all('*', function(req, res, next) {
 
 app.use(express.static('www'));
 
-// API Routes
-// app.get('/blah', routeHandler);
-
 app.set('port', process.env.PORT || 5000);
-
-
 
 app.listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));

@@ -95,7 +95,7 @@
     </div>
 
     <p ng-if="!isReady()" class="assertive-alert">Uh oh! We're not ready to submit. <BR>Check that your e-mail address is valid and that you've answered all the questions!</p>
-    <a ng-if="isReady()" class="button button-block button-positive">
+    <a ng-if="isReady()" ng-click="submit()" class="button button-block button-positive">
   Everything looks good! Submit my response and email me the results!
     </a>
   </ion-content>
