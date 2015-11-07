@@ -12,7 +12,7 @@
                   ng-value="answer"
                   ng-model="responses[question.name]"
                   ng-change="selectChange(answer, question)"
-                  name="{{'question' + (question.name)}}">
+                  name="{{'question' + question.name}}">
                   <img ng-if="answer.img" ng-src="/img/{{ answer.img }}" />
           {{ answer.text }}
         </ion-radio>

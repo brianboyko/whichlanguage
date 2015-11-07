@@ -1,17 +1,15 @@
 angular.module('starter.controllers', [])
 
 
-.controller('QuizCtrl', function($scope, Quiz) {
+.controller('QuizCtrl', function($rootScope, $scope, Quiz) {
 
-  $scope.user = {
-    'first': $scope.firstname,
-    'last': $scope.lastname,
-    'email': $scope.email
-  }
+// Hmm, for such a small app, I don't mind using $rootScope instead of
+// setting up a huge factory. 
+  $rootScope.user = {}
 
   $scope.questions = Quiz.all();
 
-  $scope.responses = {
+  $rootScope.responses = {
     'q1': {},
     'q2': {},
     'q3': {},
@@ -23,11 +21,11 @@ angular.module('starter.controllers', [])
   }
 
   $scope.inputUser = function(){
-    $scope.user.first = $scope.firstname;
-    $scope.user.last = $scope.lastname;
-    $scope.user.email = $scope.email;
+    $rootScope.user.first = $scope.firstname;
+    $rootScope.user.last = $scope.lastname;
+    $rootScope.user.email = $scope.email;
 
-    console.log($scope.user);
+    console.log($rootScope.user);
   }
 
   $scope.selectChange = function(answer, question) {
