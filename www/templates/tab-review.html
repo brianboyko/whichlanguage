@@ -14,12 +14,90 @@
       </div>
     </div>
 
-    {{user}}
-     {{questions[0].prompt}} {{responses.q1.text}}
-    
-    <a class="button button-block button-positive">
-  Everything looks good! Submit my response!
-</a>
+    <div class="card">
+      <div class="item item-divider">
+        Question 1: {{questions[0].prompt}}
+      </div>
+      <div class="item item-text-wrap">
+         <p ng-if="!responses.q1" class="assertive-alert">Uh oh! We don't have an answer for this question!</p>
+          <p ng-if="responses.q1">{{responses.q1.text}}</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="item item-divider">
+        Question 2: {{questions[1].prompt}}
+      </div>
+      <div class="item item-text-wrap">
+         <p ng-if="!responses.q2" class="assertive-alert">Uh oh! We don't have an answer for this question!</p>
+          <p ng-if="responses.q1">{{responses.q2.text}}</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="item item-divider">
+        Question 3: {{questions[2].prompt}}
+      </div>
+      <div class="item item-text-wrap">
+         <p ng-if="!responses.q3" class="assertive-alert">Uh oh! We don't have an answer for this question!</p>
+          <p ng-if="responses.q3">{{responses.q3.text}}</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="item item-divider">
+        Question 4: {{questions[3].prompt}}
+      </div>
+      <div class="item item-text-wrap">
+         <p ng-if="!responses.q4" class="assertive-alert">Uh oh! We don't have an answer for this question!</p>
+          <p ng-if="responses.q4">{{responses.q4.text}}</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="item item-divider">
+        Question 5: {{questions[4].prompt}}
+      </div>
+      <div class="item item-text-wrap">
+         <p ng-if="!responses.q5" class="assertive-alert">Uh oh! We don't have an answer for this question!</p>
+          <p ng-if="responses.q5">{{responses.q5.text}}</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="item item-divider">
+        Question 6: {{questions[5].prompt}}
+      </div>
+      <div class="item item-text-wrap">
+         <p ng-if="!responses.q6" class="assertive-alert">Uh oh! We don't have an answer for this question!</p>
+          <p ng-if="responses.q6">{{responses.q6.text}}</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="item item-divider">
+        Question 7: {{questions[6].prompt}}
+      </div>
+      <div class="item item-text-wrap">
+         <p ng-if="!responses.q7" class="assertive-alert">Uh oh! We don't have an answer for this question!</p>
+          <p ng-if="responses.q7">{{responses.q7.text}}</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="item item-divider">
+        Question 8: {{questions[7].prompt}}
+      </div>
+      <div class="item item-text-wrap">
+         <p ng-if="!responses.q8" class="assertive-alert">Uh oh! We don't have an answer for this question!</p>
+          <p ng-if="responses.q8">{{responses.q8.text}}</p>
+      </div>
+    </div>
+
+    <p ng-if="!isReady()" class="assertive-alert">Uh oh! We're not ready to submit. <BR>Check that your e-mail address is valid and that you've answered all the questions!</p>
+    <a ng-if="isReady()" class="button button-block button-positive">
+  Everything looks good! Submit my response and email me the results!
+    </a>
   </ion-content>
 </ion-view>
 

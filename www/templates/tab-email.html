@@ -24,11 +24,10 @@
   </label>
 </div>
 
-<a href="#/tab/quiz" class="button button-block button-positive icon-right ion-chevron-right">
+<a ng-if="gotEmail()" href="#/tab/quiz" class="button button-block button-positive icon-right ion-chevron-right">
   I'm ready! Take me to the quiz!
 </a>
 
-<HR>Debug: $scope.user = {{user}}
 
   </ion-content>
 </ion-view>

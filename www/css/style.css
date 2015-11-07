@@ -5,3 +5,14 @@
   padding: 10px 0px 10px 0px;
   font-weight: bold;
 }
+
+.assertive-alert, .assertive-alert p, .assertive-alert p span {
+  text-align: center;
+  color: #e42012;
+  padding: 10px 10px 10px 10px;
+  font-weight: bold;
+  border: 1px solid #e42012;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
