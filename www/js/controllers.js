@@ -1,7 +1,7 @@
 angular.module('starter.controllers', [])
 
 
-.controller('QuizCtrl', function($scope, $rootScope, $state, Quiz) {
+.controller('QuizCtrl', function($scope, $rootScope, $state, $http, Quiz) {
 
 // Hmm, for such a small app, I don't mind using $rootScope instead of
 // setting up a huge factory. This controller might also be abstracted out
@@ -31,12 +31,11 @@ angular.module('starter.controllers', [])
   };
 
   $scope.toReview = function() { 
-    console.log($rootScope.responses);
     $state.go('tab.review'); 
   };
 
   $scope.questionChange = function(){
-    console.log($rootScope.responses);
+    // console.log($rootScope.responses);
   }
 
   $scope.gotEmail = function(){
@@ -84,6 +83,17 @@ angular.module('starter.controllers', [])
     }
     console.log(user);
 
+    var req = {
+      method: 'POST',
+      url: '/api/storeUser',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      data: { test: "test"}
+    }
+    $http(req).then(function() {
+      console.log("Success")
+    });
   }
 
 })
