@@ -1,23 +1,22 @@
 <ion-view view-title="Quiz">
   <ion-content  ng-controller="QuizCtrl">
-    <div class="list list-inset">
+    <div class="list">
       <div class="item-remove-animate item-avatar item-icon-right" ng-repeat="question in questions" type="item-text-wrap" href="#">
       <fieldset>
-        <div class="item item-text-wrap item-divider question-header"> 
-          {{ question.prompt }} 
+        <div class="item item-text-wrap item-divider"> 
+          {{ question.prompt }}{{question.name}}
         </div>
         
           <ion-radio class="item-text-wrap" 
                   ng-repeat="answer in question.answers"
-                  ng-value="answer"
+                  ng-value="answer.value"
                   ng-model="responses[question.name]"
                   ng-change="selectChange(answer, question)"
                   name="{{'question' + (question.name)}}">
                   <img ng-if="answer.img" ng-src="/img/{{ answer.img }}" />
-          {{ answer.text }}
+          {{ answer.text }}<BR>{{answer.value}}<BR>{{question.name}}<BR>{{questions.$index}}
         </ion-radio>
         </fieldset>
-        <HR>
       </div>
     </div>
   </ion-content>

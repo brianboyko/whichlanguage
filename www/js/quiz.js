@@ -203,7 +203,7 @@ angular.module('starter.quiz', [])
     },
     {
       // questions[7] 
-      'prompt': 'Finally, Which of these Middle Earth characters do you identify with most?',
+      'prompt': 'Finally, which of these Middle Earth characters do you identify with most?',
       'name': 'q8',
       'answers': [
          {
