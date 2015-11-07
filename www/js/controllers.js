@@ -1,28 +1,56 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
 
-.controller('ChatsCtrl', function($scope, Chats) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
+.controller('QuizCtrl', function($scope, $rootScope, Quiz) {
 
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
+// Hmm, for such a small app, I don't mind using $rootScope instead of
+// setting up a huge factory. This controller might also be abstracted out
+// a bit, so there's less logic in it.  
+
+  $rootScope.user = {}
+
+  $scope.questions = Quiz.all();
+
+  $rootScope.responses = {
+    'q1': undefined,
+    'q2': undefined,
+    'q3': undefined,
+    'q4': undefined,
+    'q5': undefined,
+    'q6': undefined,
+    'q7': undefined,
+    'q8': undefined
+  }
+
+  $scope.inputUser = function(){
+    $rootScope.first = $scope.firstname;
+    $rootScope.last = $scope.lastname;
+    $rootScope.email = $scope.emailAddress;
+  }
+
+
+  $scope.gotEmail = function(){
+    if ($rootScope.email === undefined || $rootScope.email === '' || $rootScope.email.indexOf('@') === -1){
+      return false;
+    }
+    return true; 
+  }  
+
+  $scope.gotQuestions = function(){
+    for (var key in $rootScope.responses){
+      if ($rootScope.responses[key] === undefined){
+        return false;
+      }
+    }
+    return true;
+  }
+
+  $scope.isReady = function(){
+    return ($scope.gotEmail() && $scope.gotQuestions); 
+  }
+
+
+
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
-})
 
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
-});

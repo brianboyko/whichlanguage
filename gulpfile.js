@@ -6,12 +6,28 @@ var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
+var uglify = require('gulp-uglify');
+var sourcemaps = require('gulp-sourcemaps');
+var gutil = require('gulp-util');
+var nodemon = require('gulp-nodemon');
 
 var paths = {
   sass: ['./scss/**/*.scss']
 };
 
-gulp.task('default', ['sass']);
+gulp.task('default', ['sass', 'browserify', 'serve']);
+
+gulp.task('browserify', function() {
+    return browserify('./www/js/app.js')
+        .bundle()
+        //Pass desired output filename to vinyl-source-stream
+        .pipe(source('bundle.js'))
+        // Start piping stream to tasks!
+        .pipe(gulp.dest('./build/'));
+});
 
 gulp.task('sass', function(done) {
   gulp.src('./scss/ionic.app.scss')
@@ -28,6 +44,14 @@ gulp.task('sass', function(done) {
 
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass']);
+});
+
+gulp.task('serve', function() {
+  nodemon({
+    script: 'server.js'
+  , ext: 'js html'
+  , env: { 'NODE_ENV': 'development' }
+  })
 });
 
 gulp.task('install', ['git-check'], function() {

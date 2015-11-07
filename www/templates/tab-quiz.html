@@ -1,0 +1,29 @@
+<ion-view view-title="Quiz">
+  <ion-content  ng-controller="QuizCtrl">
+    <div class="list list-inset">
+      <div class="item-remove-animate item-avatar item-icon-right" ng-repeat="question in questions" type="item-text-wrap" href="#">
+      <fieldset>
+        <div class="item item-text-wrap item-divider question-header"> 
+          {{ question.prompt }} 
+        </div>
+        
+          <ion-radio class="item-text-wrap" 
+                  ng-repeat="answer in question.answers"
+                  ng-value="answer"
+                  ng-model="responses[question.name]"
+                  name="{{'question' + question.name}}">
+                  <img ng-if="answer.img" ng-src="/img/{{ answer.img }}" />
+          {{ answer.text }}
+        </ion-radio>
+        </fieldset>
+        <HR>
+      </div>
+    </div>
+    <p ng-if="!gotQuestions()" class="assertive-alert">Uh oh! One or more questions haven't been answered!</p>
+    <a ng-if="gotQuestions()" href="#/tab/review" class="button button-block button-positive icon-right ion-chevron-right">
+  I've answered all the questions - let's review the answers!
+</a>
+  </ion-content>
+</ion-view>
+
+

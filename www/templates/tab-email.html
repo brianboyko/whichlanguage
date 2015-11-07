@@ -1,0 +1,35 @@
+<ion-view view-title="Sign Up">
+  <ion-content ng-controller="QuizCtrl">
+
+<div class="card">
+  <div class="item item-divider">
+    What Programming Language Is Right For Me?
+  </div>
+  <div class="item item-text-wrap">
+    <P>Hello there! This is a non-scientific test which will tell you which programming languages are best suited for you to study as you start programming.  This is based on the excellent infographic at <a href="http://carlcheo.com/startcoding">Carlcheo.com</a></P>
+    <P>However, keep in mind that what you start to program with doesn't matter. Programming languages have different syntax and ways of doing things, but they all do the same thing.</P>
+    <P>To start, enter your first name, last name, and e-mail below, then head over to the Quiz tab. When you're done, head to the Review tab to check your answers and submit them. Once you've done that, we'll calculate your answers and send you an e-mail with a detailed response and advice on where you can find more information.</P>
+  </div>
+</div>
+
+<div class="list">
+  <label class="item item-input">
+    <input ng-model="firstname" ng-change="inputUser()" type="text" placeholder="First Name">
+  </label>
+  <label class="item item-input">
+    <input ng-model="lastname" ng-change="inputUser()" type="text" placeholder="Last Name">
+  </label>
+  <label class="item item-input" required>
+    <input ng-model="emailAddress" ng-change="inputUser()" type="text" placeholder="Email">
+  </label>
+</div>
+
+<a ng-if="gotEmail()" href="#/tab/quiz" class="button button-block button-positive icon-right ion-chevron-right">
+  I'm ready! Take me to the quiz!
+</a>
+
+
+  </ion-content>
+</ion-view>
+
+

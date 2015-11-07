@@ -1,0 +1,22 @@
+Client: 
+
+Create a simple MEAN Stack app that mimics one of those silly personality quizzes you’d find on Buzzfeed or another similar clickbait site.  Perhaps make it about a subject that’s near and dear to you. The selectable options should be presented clearly and neatly, and you can either have one option per “page” or all the options on the same page.  
+
+The quiz results should be emailed to whatever email address you (the user) provide at the start. 
+
+The results should also be saved to a database.  If possible, please make this a build-able Cordova project.
+
+Get as much done as you can by end of day on Sunday (11/8/2015). 
+
+Set it up in your Github repository as well as on a Heroku server so it'll be viewable on the web. 
+
+Upon completion please send us an email with the public Github repository for this project (if you have separate repositories for the front and back, we'll need both) and an .apk if you were able to use Cordova to build the project.  
+
+Please ensure the project is buildable from a fresh pull from the repo.
+
+A couple things to take a look at that may help you:
+-Nodemailer
+-Ionic
+
+Ready, set, code! Can't wait to see the quiz!
+

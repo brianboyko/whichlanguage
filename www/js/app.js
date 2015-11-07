@@ -5,7 +5,8 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+// 'starter.quiz' is found in quiz.js
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.quiz'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -40,46 +41,49 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.quiz', {
+    url: '/quiz',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-quiz': {
+        templateUrl: 'templates/tab-quiz.html',
+        controller: 'QuizCtrl'
       }
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
-
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.email', {
+    url: '/email',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-email': {
+        templateUrl: 'templates/tab-email.html',
+        controller: 'QuizCtrl'
       }
     }
-  });
+  })
 
+  .state('tab.review', {
+    url: '/review',
+    views: {
+      'tab-review': {
+        templateUrl: 'templates/tab-review.html',
+        controller: 'QuizCtrl'
+      }
+    }
+  })
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/email');
 
 });
+
+
+// var score  = {
+//   'c'           : 0,
+//   'cPlusPlus'   : 0,
+//   'cSharp'      : 0,
+//   'java'        : 0,
+//   'javascript'  : 0,
+//   'objectiveC'  : 0,
+//   'php'         : 0,
+//   'python'      : 0,
+//   'ruby'        : 0
+// }

@@ -19,6 +19,7 @@ var configDB = require('./db/config.js');
 // -------------
 mongoose.connect(configDB.url);
 var app = express();
+require('./config/routes.js')(app);
 
 // CORS (Cross-Origin Resource Sharing) headers to support Cross-site HTTP requests
 app.all('*', function(req, res, next) {
@@ -38,7 +39,7 @@ app.use(express.static('www'));
 
 app.set('port', process.env.PORT || 5000);
 
-require('./config/routes.js')(app);
+
 
 app.listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
