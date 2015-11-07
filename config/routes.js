@@ -1,5 +1,5 @@
 var UserController    = require('../db/controllers/userController');
-
+var mailer = require('./mailer.js');
 // not sure if this is strictly required here.
 // var User              = require('../db/models/userModel');
 // var mongoose          = require('mongoose'); 
@@ -7,12 +7,8 @@ var UserController    = require('../db/controllers/userController');
 module.exports = function(app){
 
   app.post('/api/storeUser', function(req, res){
-    console.log("route req: ", req.body, req.data)
-    UserController.storeUser(req, res)
-  });
-
-  app.get('/api/getUserByEmail', function(req, res){
-    UserController.getUserByEmail(req, res)
+    mailer(req);
+    UserController.storeUser(req, res);
   });
 
 };

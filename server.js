@@ -14,6 +14,7 @@ var bodyParser = require('body-parser')
 var express  = require('express');
 // Local
 var configDB = require('./db/config.js'); 
+var nodemailer = require('nodemailer');
 
 // -------------
 // CONNECTIONS & CONFIGURATION
@@ -36,12 +37,7 @@ app.all('*', function(req, res, next) {
 
 app.use(express.static('www'));
 
-// API Routes
-// app.get('/blah', routeHandler);
-
 app.set('port', process.env.PORT || 5000);
-
-
 
 app.listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
