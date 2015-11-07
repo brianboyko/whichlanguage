@@ -4,10 +4,14 @@ module.exports = {
   storeUser: function(req, res) {
     context = this; // some people prefer .bind(this);
     console.log("req.email:", req.email);
-    console.log("req.tests:", req.tests);
+    console.log("req.scores:", req.tests);
     var myUser = new User({
-      email: req.email,
-      tests: req.tests
+      local: {
+        first: req.first,
+        last: req.last,
+        email: req.email
+      },
+      scores: req.scores
     });
     myUser.save(function(err) {
       if (err) {
@@ -34,3 +38,5 @@ module.exports = {
     });
   }
 }
+
+

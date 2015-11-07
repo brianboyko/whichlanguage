@@ -2,10 +2,20 @@ var mongoose = require('mongoose');
 
 var userSchema = mongoose.Schema({
   local: {
+    first: String,
+    last: String,
     email: String
   },
-  tests: {
-    type: Array // stores test results
+  scores: {
+    c: Number,
+    cPlusPlus: Number,
+    cSharp: Number,
+    java: Number,
+    javascript: Number,
+    objectiveC: Number,
+    php: Number,
+    python: Number,
+    ruby: Number
   }
 });
 
