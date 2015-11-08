@@ -39,6 +39,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.quiz'])
     templateUrl: 'templates/tabs.html'
   })
 
+
   // Each tab has its own nav history stack:
 
   .state('tab.quiz', {
@@ -70,6 +71,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.quiz'])
       }
     }
   })
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/email');
 

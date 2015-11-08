@@ -15,6 +15,7 @@ module.exports = {
         console.log("There's an error:", err);
       } else {
         console.log("Success.");
+        res.send("Success!");
       }
     });
   }

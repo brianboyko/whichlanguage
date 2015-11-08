@@ -1,7 +1,7 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ionic'])
 
 
-.controller('QuizCtrl', function($scope, $rootScope, $state, $http, Quiz) {
+.controller('QuizCtrl', function($scope, $rootScope, $state, $http, $location, $ionicModal, Quiz) {
 
 // Hmm, for such a small app, I don't mind using $rootScope instead of
 // setting up a huge factory. This controller might also be abstracted out
@@ -19,6 +19,32 @@ angular.module('starter.controllers', [])
     'q7': undefined,
     'q8': undefined
   }
+
+  $ionicModal.fromTemplateUrl('thanks.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+  $scope.openModal = function() {
+    $scope.modal.show();
+  };
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+  //Cleanup the modal when we're done with it!
+  $scope.$on('$destroy', function() {
+    $scope.modal.remove();
+  });
+  // Execute action on hide modal
+  $scope.$on('modal.hidden', function() {
+    // Execute action
+  });
+  // Execute action on remove modal
+  $scope.$on('modal.removed', function() {
+    // Execute action
+  });
+
 
   $scope.inputUser = function(){
     $rootScope.first = $scope.firstname;
@@ -59,7 +85,8 @@ angular.module('starter.controllers', [])
   }
 
   $scope.submit = function(){
-    console.log("$scope.submit being called");
+    var context = this; 
+    // should abstract this to a factory. 
     var user = {
       first: $rootScope.first,
       last: $rootScope.last,
@@ -92,7 +119,8 @@ angular.module('starter.controllers', [])
       data: user
     }
     $http(req).then(function() {
-      console.log("Success")
+      console.log("Success and promise executed")
+      $scope.modal.show();
     });
   }
 
